@@ -1,0 +1,122 @@
+{
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/flowtype",
+    "prettier/react",
+    "prettier/standard"
+  ],
+  "parser": "babel-eslint",
+  "plugins": [
+    "flowtype",
+    "prettier"
+  ],
+  "env": {
+    "browser": true,
+    "jest": true,
+    "jasmine": true
+  },
+  "globals": {
+    "React$Component": "",
+    "React$Element": "",
+    "SyntheticEvent": ""
+  },
+  "rules": {
+    "react/require-default-props": "off",
+    "react/prefer-stateless-function": "warn",
+    "react/no-array-index-key": "warn",
+    "react/forbid-prop-types": "warn",
+    "react/sort-comp": "off",
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": "warn",
+    "import/first": "off",
+    "no-param-reassign": "off",
+    "jsx-a11y": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "no-plusplus": "off",
+    // Variables in a loop condition often are modified in the loop.
+    // If not, it’s possibly a mistake.
+    "no-unmodified-loop-condition": "error",
+    "no-negated-condition": "warn",
+    "curly": [
+      "warn",
+      "all"
+    ],
+    "arrow-body-style": "warn",
+    "no-eq-null": "error",
+    "no-warning-comments": "warn",
+    "class-methods-use-this": "off",
+    "import/prefer-default-export": "off",
+    "max-len": [
+      "error",
+      120
+    ],
+    "max-lines": "off",
+    "import/extensions": [
+      "warn",
+      "always",
+      {
+        "js": "always",
+        "jsx": "always",
+        "scss": "always",
+        "json": "always",
+        "ignorePackages": true
+      }
+    ],
+    "flowtype/define-flow-type": 2,
+    "flowtype/require-parameter-type": 2,
+    "flowtype/require-return-type": [
+      2,
+      "always",
+      {
+        "annotateUndefined": "always"
+      }
+    ],
+    "flowtype/require-valid-file-annotation": [
+      2,
+      "always"
+    ],
+    "flowtype/semi": 2,
+    "flowtype/no-weak-types": [
+      2,
+      {
+        "any": true,
+        "Object": true,
+        "Function": true
+      }
+    ],
+    "prettier/prettier": "error"
+  },
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/stories/**",
+        "**__test__/**",
+        "webpack/**",
+        "utils/**"
+      ],
+      "plugins": [],
+      "rules": {
+        "flowtype/define-flow-type": 0,
+        "flowtype/require-parameter-type": 0,
+        "flowtype/require-return-type": 0,
+        "flowtype/require-valid-file-annotation": 0,
+        "flowtype/semi": 0,
+        "flowtype/no-weak-types": 0
+      }
+    },
+    {
+      "files": ["**/*.jsx"],
+      "plugins": [],
+      "rules": {
+        "flowtype/require-return-type": 0
+      }
+    }
+  ]
+}
