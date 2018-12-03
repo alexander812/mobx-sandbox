@@ -5,13 +5,14 @@ const path = require('path');
 
 const makeAppConfig = () => ({
   mode: 'development',
+  context: path.resolve(__dirname, 'src'),
   entry: {
-    main: ['./src/index.js'],
+    main: ['./index.js'],
   },
   output: {
     path: __dirname,
     filename: 'index.js',
-    publicPath: '/',
+    publicPath: '',
   },
   watchOptions: {
     aggregateTimeout: 100,

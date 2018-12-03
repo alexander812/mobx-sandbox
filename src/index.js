@@ -1,5 +1,2 @@
-import State from './state.js';
-
-
-const state = new State();
-
+import plaformBinary from './packages/plaformBinary/plaformBinary.js';
+console.log([32323]);
