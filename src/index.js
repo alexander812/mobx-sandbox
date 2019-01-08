@@ -1,5 +1,11 @@
-import State from './state.js';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './app/index.jsx';
 
 
-const state = new State();
 
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  ReactDOM.render(React.createElement(App), document.querySelector('#root'));
+});
